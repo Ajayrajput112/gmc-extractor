@@ -32,7 +32,7 @@ from src.validate import validate_extraction, build_reprompt_message, TargetedFi
 
 load_dotenv()
 
-DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.7-flash")
+DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 
 # Complete list of 30 GMC benefit features defined in the schema
 ALL_FEATURE_KEYS = [

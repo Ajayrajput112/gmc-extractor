@@ -35,3 +35,6 @@ typing-inspection==0.4.4
 typing_extensions==4.16.0
 urllib3==2.8.0
 websockets==17.3
+fastapi>=0.115.0
+uvicorn>=0.30.0
+python-multipart>=0.0.12

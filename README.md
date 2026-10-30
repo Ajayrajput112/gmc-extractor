@@ -105,26 +105,40 @@ flowchart TD
 
 ## 5. How to Run the Project
 
-### A. Batch Folder Processing (Default)
+### A. 🌐 Launch the Interactive Web Dashboard (Recommended)
+Launch the modern glassmorphic web dashboard with live PDF drag-and-drop, 30-feature inspection, comparative matrix, and SVG visual analytics:
+
+```bash
+python run_ui.py
+```
+This automatically launches your browser at **`http://127.0.0.1:8000`** with:
+- 📊 **Portfolio Analytics**: Aggregated lives, premium, cost per life, and interactive demographics donut chart.
+- 🔍 **Policy Deep-Dive**: Complete 30-feature audit grid with real-time clause search, status filters (Covered, Waived, Applied), and verbatim quote grounding citations.
+- ⚖️ **Side-by-Side Comparison Matrix**: Cross-policy benefit comparison table with CSV export.
+- 📤 **Live PDF Ingestion**: Drag-and-drop upload zone that processes new policies directly through the Gemini pipeline in real-time.
+
+---
+
+### B. Batch Folder Processing (CLI)
 Process all PDF policies in the `samples/` directory and save outputs to `outputs/`:
 ```bash
 python main.py --input samples/ --output outputs/
 ```
 
-### B. Single File Processing
+### C. Single File Processing (CLI)
 Process an individual policy PDF:
 ```bash
 python main.py --input "samples/1.Policy Copy.pdf" --output outputs/
 ```
 
-### C. Advanced CLI Options
+### D. Advanced CLI Options
 ```bash
 python main.py --help
 ```
 Options available:
 - `--input PATH`: File or folder path (default: `samples/`).
 - `--output PATH`: Directory to save extracted JSON and CSV (default: `outputs/`).
-- `--model MODEL_NAME`: Override model (default: `gemini-2.5-flash`).
+- `--model MODEL_NAME`: Override model (default: `gemini-3.5-flash-lite`).
 - `--no-reprompt`: Disable the targeted secondary validation re-prompting pass.
 - `--verbose`: Enable detailed debug tracing and error stacks.
 

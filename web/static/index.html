@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GMC Intelligence Dashboard | AI Policy Extractor & Analytics</title>
+  <meta name="description" content="State-of-the-art AI-powered Group Medical Cover (GMC) insurance policy extractor, comparative visual analytics, and 30-feature benefit audit platform.">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+</head>
+<body>
+
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <div class="app-container">
+    
+    <!-- =====================================================================
+         Top Navigation Bar
+         ===================================================================== -->
+    <header class="navbar">
+      <div class="brand-section">
+        <div class="brand-logo">🛡️</div>
+        <div>
+          <h1 class="brand-title">GMC Intelligence</h1>
+          <p class="brand-subtitle">AI Insurance Document Extractor & Analytics Engine</p>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <div class="status-pill" id="system-status-pill" title="Backend & Model Status">
+          <span class="status-dot" id="status-dot"></span>
+          <span id="status-text">Connecting...</span>
+        </div>
+        <a href="/api/download/csv" class="btn-secondary" id="btn-export-csv" title="Download compiled portfolio CSV">
+          <span>📥</span> Export CSV
+        </a>
+        <button class="btn-primary" id="btn-quick-upload">
+          <span>⚡</span> Extract New PDF
+        </button>
+      </div>
+    </header>
+
+    <!-- =====================================================================
+         Navigation Tabs
+         ===================================================================== -->
+    <nav class="tab-navigation">
+      <button class="tab-btn active" data-tab="overview">
+        <span>📊</span> Portfolio Overview
+      </button>
+      <button class="tab-btn" data-tab="deepdive">
+        <span>🔍</span> Policy Deep-Dive (30 Features)
+      </button>
+      <button class="tab-btn" data-tab="comparison">
+        <span>⚖️</span> Comparison Matrix
+      </button>
+      <button class="tab-btn" data-tab="uploader">
+        <span>📤</span> Live PDF Extractor
+      </button>
+    </nav>
+
+    <!-- =====================================================================
+         Portfolio Key Metric Cards
+         ===================================================================== -->
+    <section class="stats-grid" id="stats-grid">
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">Total Policies</div>
+          <div class="stat-value" id="stat-total-policies">0</div>
+          <div class="stat-sub" id="stat-gmc-ratio">0 GMC Policies</div>
+        </div>
+        <div class="stat-icon">📑</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">Total Insured Lives</div>
+          <div class="stat-value" id="stat-total-lives">0</div>
+          <div class="stat-sub">Employees & Dependents</div>
+        </div>
+        <div class="stat-icon">👥</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">Portfolio Premium</div>
+          <div class="stat-value" id="stat-total-premium">₹0</div>
+          <div class="stat-sub">Gross Corporate Premium</div>
+        </div>
+        <div class="stat-icon">💎</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">Avg Premium / Life</div>
+          <div class="stat-value" id="stat-avg-cost">₹0</div>
+          <div class="stat-sub">Cost Efficiency Metric</div>
+        </div>
+        <div class="stat-icon">📈</div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VIEW 1: Portfolio Overview
+         ===================================================================== -->
+    <main class="view-section active" id="overview-view">
+      
+      <!-- Visual Analytics Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-bottom: 32px;">
+        
+        <!-- Demographics Donut Chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">👥 Demographics Breakdown</h3>
+            <span class="page-pill" id="chart-lives-badge">0 Lives</span>
+          </div>
+          <div class="donut-chart-container">
+            <svg class="donut-svg" viewBox="0 0 100 100" id="demographics-svg">
+              <circle cx="50" cy="50" r="38" stroke="rgba(255,255,255,0.06)" stroke-width="20" fill="none"/>
+              <circle id="donut-employees" cx="50" cy="50" r="38" stroke="var(--primary)" stroke-width="20" fill="none" stroke-dasharray="0 238.7" stroke-dashoffset="0"/>
+              <circle id="donut-dependents" cx="50" cy="50" r="38" stroke="var(--accent-cyan)" stroke-width="20" fill="none" stroke-dasharray="0 238.7" stroke-dashoffset="0"/>
+            </svg>
+            <div class="chart-legend" id="demographics-legend">
+              <div class="legend-item">
+                <span class="legend-dot" style="background: var(--primary);"></span>
+                <span id="legend-employees">Employees: 0</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: var(--accent-cyan);"></span>
+                <span id="legend-dependents">Dependents: 0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coverage & Features Breakdown -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">🎯 30-Feature Compliance Benchmarks</h3>
+            <span class="insurer-badge">Standard Norms</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px;">
+                <span>Pre-Existing Disease (PED) Waiver Rate</span>
+                <strong id="bar-ped-val">100%</strong>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="bar-ped-fill" style="width: 100%; background: var(--status-covered);"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px;">
+                <span>Maternity 9-Month Waiting Period Waiver Rate</span>
+                <strong id="bar-mat-val">100%</strong>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="bar-mat-fill" style="width: 100%; background: var(--status-waived);"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px;">
+                <span>Corporate Buffer Included</span>
+                <strong id="bar-buf-val">50%</strong>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="bar-buf-fill" style="width: 50%; background: var(--accent-amber);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Policy Cards Grid -->
+      <div class="section-header">
+        <h2 class="section-title"><span>📑</span> Extracted Policies in Portfolio</h2>
+        <button class="btn-secondary" id="btn-refresh-policies">🔄 Refresh</button>
+      </div>
+
+      <div class="policies-grid" id="overview-policies-grid">
+        <!-- Rendered dynamically via JavaScript -->
+        <div style="text-align: center; grid-column: 1/-1; padding: 40px; color: var(--text-muted);">
+          Loading extracted policies...
+        </div>
+      </div>
+
+    </main>
+
+    <!-- =====================================================================
+         VIEW 2: Policy Deep-Dive (30-Feature Audit & Clauses)
+         ===================================================================== -->
+    <section class="view-section" id="deepdive-view">
+      <div class="detail-layout">
+        
+        <!-- Left Sidebar: Policy Selector & Core Metadata -->
+        <aside class="sidebar-panel">
+          <div style="margin-bottom: 20px;">
+            <label style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 8px;">
+              Select Policy to Inspect
+            </label>
+            <select id="deepdive-policy-select" style="width: 100%; background: rgba(255,255,255,0.06); color: white; border: 1px solid var(--border-glass); padding: 10px 14px; border-radius: 10px; font-family: var(--font-body); font-size: 13px; outline: none; cursor: pointer;">
+              <!-- Options populated dynamically -->
+            </select>
+          </div>
+
+          <!-- Metadata Summary Box -->
+          <div id="policy-meta-container">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <span class="insurer-badge" id="meta-insurer">Insurer</span>
+              <span class="type-pill type-gmc" id="meta-type">GMC</span>
+            </div>
+            
+            <h3 id="meta-policy-name" style="font-family: var(--font-display); font-size: 18px; margin-bottom: 4px; line-height: 1.3;">
+              Policy Name
+            </h3>
+            <p id="meta-policy-number" style="font-family: monospace; font-size: 12px; color: var(--text-muted); margin-bottom: 16px;">
+              #0000000000
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 12px; padding-top: 14px; border-top: 1px solid var(--border-glass); font-size: 13px;">
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Policy Holder:</span>
+                <span id="meta-holder" style="font-weight: 600; text-align: right; max-width: 180px;">-</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">TPA:</span>
+                <span id="meta-tpa" style="font-weight: 600;">-</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Coverage Period:</span>
+                <span id="meta-dates" style="font-weight: 600;">-</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Total Lives:</span>
+                <span id="meta-lives" style="font-weight: 700; color: var(--accent-cyan);">-</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Net Premium:</span>
+                <span id="meta-net-premium" style="font-weight: 600;">-</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Gross Premium:</span>
+                <span id="meta-gross-premium" style="font-weight: 700; color: var(--accent-emerald);">-</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Sum Insured Tiers:</span>
+                <span id="meta-tiers" style="font-weight: 600; text-align: right; max-width: 180px;">-</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Audit Status:</span>
+                <span id="meta-validation" class="page-pill">-</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 10px;">
+              <button class="btn-secondary" id="btn-view-raw-json" style="width: 100%; justify-content: center;">
+                <span>{ }</span> View Raw JSON
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Main: Search, Filters & 30 Benefit Cards -->
+        <div class="main-detail-panel">
+          
+          <!-- Search & Filter Controls -->
+          <div class="filter-bar">
+            <div class="search-input-wrapper">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="feature-search-input" class="search-input" placeholder="Search clauses (e.g. maternity, room rent, copay, 30-day)...">
+            </div>
+
+            <div class="filter-pills" id="status-filter-pills">
+              <button class="filter-pill active" data-status="all">All (30)</button>
+              <button class="filter-pill" data-status="covered">Covered</button>
+              <button class="filter-pill" data-status="waived">Waived</button>
+              <button class="filter-pill" data-status="applied">Applied</button>
+              <button class="filter-pill" data-status="not_covered">Not Covered</button>
+              <button class="filter-pill" data-status="not_mentioned">Not Mentioned</button>
+            </div>
+          </div>
+
+          <!-- Feature Count Indicator -->
+          <div style="display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--text-muted); padding: 0 4px;">
+            <span id="features-counter">Showing 30 of 30 Features</span>
+            <span style="font-size: 11px;">✨ Verbatim Quotes & Page Citations Grounded in Source Document</span>
+          </div>
+
+          <!-- 30 Benefit Feature Cards Grid -->
+          <div class="features-grid" id="features-grid">
+            <!-- Populated dynamically via JavaScript -->
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VIEW 3: Side-by-Side Comparison Matrix
+         ===================================================================== -->
+    <section class="view-section" id="comparison-view">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title"><span>⚖️</span> Multi-Policy Comparative Matrix</h2>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+            Cross-evaluate policy limits, maternity provisions, waiting period waivers, and cost-efficiency side-by-side.
+          </p>
+        </div>
+        <button class="btn-primary" id="btn-export-comparison-csv">
+          <span>📥</span> Export Comparison
+        </button>
+      </div>
+
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table" id="comparison-table">
+          <thead id="comparison-thead">
+            <!-- Dynamically populated -->
+          </thead>
+          <tbody id="comparison-tbody">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VIEW 4: Live PDF Extractor & Ingestion
+         ===================================================================== -->
+    <section class="view-section" id="uploader-view">
+      
+      <div class="upload-card" id="drop-zone">
+        <div class="upload-icon">📄</div>
+        <h2 class="upload-title">Drop your GMC Policy PDF here</h2>
+        <p class="upload-subtitle">
+          Supports GMC Schedules, Quotations, Policy Wordings, and Coverage Slips.
+          <br>Click anywhere or drag & drop a PDF to begin automated extraction.
+        </p>
+        
+        <input type="file" id="policy-file-input" accept=".pdf" style="display: none;">
+        
+        <div style="margin-top: 20px;">
+          <button class="btn-primary" id="btn-select-file" type="button">
+            <span>📁</span> Browse Local PDF
+          </button>
+        </div>
+
+        <!-- Extraction Progress Indicator -->
+        <div class="upload-progress" id="upload-progress">
+          <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600;">
+            <span id="progress-stage-text">Processing document...</span>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-fill"></div>
+          </div>
+          <div style="font-size: 11px; color: var(--text-muted); margin-top: 8px; font-style: italic;" id="progress-detail">
+            Extracting text, OCR tables, and classifying policy clauses...
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Tips Box -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Fast PDF Extraction</div>
+            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-top: 6px;">
+              Pdfplumber text & table extraction pipeline captures every clause, tabular sub-limit, and condition without truncation.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Gemini 2.5 Flash Intelligence</div>
+            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-top: 6px;">
+              Audits all 30 industry standard GMC features with exact clause quotes, page numbers, and normalized status tags.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Instant Validation & Summary</div>
+            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-top: 6px;">
+              Audits dates, math totals, and GST checks. Updates <code style="color: var(--accent-cyan);">summary.csv</code> and generates JSON artifacts automatically.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- =====================================================================
+       Evidence Audit & Raw JSON Inspection Modal
+       ===================================================================== -->
+  <div class="modal-overlay" id="audit-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      <h3 id="modal-title" style="font-family: var(--font-display); font-size: 18px; margin-bottom: 12px; color: #ffffff;">
+        Evidence Audit
+      </h3>
+      <div id="modal-content" style="font-size: 13px; line-height: 1.6; color: #cbd5e1;">
+        <!-- Modal body -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" style="position: fixed; bottom: 24px; right: 24px; background: #1e293b; border: 1px solid var(--border-glass-hover); border-radius: 12px; padding: 14px 20px; font-size: 13px; color: white; display: none; align-items: center; gap: 10px; box-shadow: var(--shadow-lg); z-index: 2000; animation: fadeIn 0.3s ease;">
+    <span id="toast-icon">ℹ️</span>
+    <span id="toast-message">Notification</span>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

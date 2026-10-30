@@ -1,0 +1,343 @@
+{
+  "is_gmc_policy": false,
+  "policy_type": "Group Personal Accident",
+  "flag_notes": "Document identified as 'Group Personal Accident'. It does not provide Group Medical Cover (GMC) health benefits.",
+  "insurer_name": "Liberty General Insurance Limited",
+  "tpa_name": null,
+  "policy_details": {
+    "policy_name": "LIBERTY GROUP PERSONAL ACCIDENT POLICY",
+    "policy_number": "4112-200101-22-7001375-00-000",
+    "policy_holder_name": "Net Catalysts",
+    "start_date": "02/06/2022",
+    "end_date": "01/06/2023",
+    "policy_tenure_days": 365,
+    "is_renewal": true,
+    "previous_policy_number": null,
+    "family_structure": null,
+    "sum_insured_tiers": [
+      500000.0
+    ]
+  },
+  "premium": {
+    "net_premium": 9600.0,
+    "gst_amount": 1728.0,
+    "total_premium": 11328.0,
+    "payment_frequency": null
+  },
+  "demographics": {
+    "total_employees": 48,
+    "total_spouses": null,
+    "total_children": null,
+    "total_parents": null,
+    "total_dependents": null,
+    "total_lives": 48
+  },
+  "features": {
+    "room_rent": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "icu_charges": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "pre_hospitalization": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "post_hospitalization": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "maternity_normal": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "maternity_c_section": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "maternity_waiting_period_9m": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "baby_day_one_cover": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "vaccination_coverage": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "waiting_period_30_days": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "waiting_period_first_second_year": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "pre_existing_diseases": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "day_care_expenses": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "opd_benefit": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "teleconsultation": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "pharmacy_discount": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "domiciliary_hospitalization": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "annual_health_checkup": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "modern_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "bariatric_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "psychiatric_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "ayush_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "lgbtq_live_in_partners": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "organ_donor_expenses": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "infertility_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "surrogacy_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "ambulance_charges": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "air_ambulance_charges": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "corporate_buffer": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "disease_wise_capping": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    }
+  },
+  "source_file": "Policy liberty 2022-2023.pdf",
+  "total_pages": 3,
+  "validation_status": "PASSED_WITH_WARNINGS",
+  "validation_messages": [
+    "Document identified as 'Group Personal Accident'. It does not provide Group Medical Cover (GMC) health benefits."
+  ]
+}
