@@ -36,6 +36,9 @@
         <a href="/api/download/csv" class="btn-secondary" id="btn-export-csv" title="Download compiled portfolio CSV">
           <span>📥</span> Export CSV
         </a>
+        <a href="/api/download/json" class="btn-secondary" id="btn-export-json" title="Download complete portfolio JSON">
+          <span>📦</span> Export Portfolio JSON
+        </a>
         <button class="btn-primary" id="btn-quick-upload">
           <span>⚡</span> Extract New PDF
         </button>
@@ -255,6 +258,9 @@
             </div>
 
             <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 10px;">
+              <a id="btn-download-single-json" class="btn-primary" style="width: 100%; justify-content: center; text-decoration: none;" href="#" download="policy.json">
+                <span>📥</span> Download Policy JSON
+              </a>
               <button class="btn-secondary" id="btn-view-raw-json" style="width: 100%; justify-content: center;">
                 <span>{ }</span> View Raw JSON
               </button>
@@ -309,9 +315,14 @@
             Cross-evaluate policy limits, maternity provisions, waiting period waivers, and cost-efficiency side-by-side.
           </p>
         </div>
-        <button class="btn-primary" id="btn-export-comparison-csv">
-          <span>📥</span> Export Comparison
-        </button>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="btn-secondary" id="btn-export-comparison-json">
+            <span>📦</span> Export Comparison JSON
+          </button>
+          <button class="btn-primary" id="btn-export-comparison-csv">
+            <span>📥</span> Export Comparison CSV
+          </button>
+        </div>
       </div>
 
       <div class="comparison-table-wrapper">

@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn-quick-upload").addEventListener("click", () => switchTab("uploader"));
   document.getElementById("btn-refresh-policies").addEventListener("click", () => loadPortfolioData(true));
   document.getElementById("btn-export-comparison-csv").addEventListener("click", exportComparisonToCSV);
+  document.getElementById("btn-export-comparison-json").addEventListener("click", exportComparisonToJSON);
 });
 
 // =====================================================================
@@ -335,6 +336,12 @@ function updatePolicyMetadataSidebar(data) {
   const validEl = document.getElementById("meta-validation");
   validEl.textContent = valStatus;
   validEl.style.color = valStatus === "PASS" ? "var(--accent-emerald)" : "var(--accent-amber)";
+
+  const downloadBtn = document.getElementById("btn-download-single-json");
+  if (downloadBtn) {
+    downloadBtn.href = `/api/policy/${state.selectedPolicyId}/download`;
+    downloadBtn.setAttribute("download", `${state.selectedPolicyId}.json`);
+  }
 
   // JSON Modal trigger
   document.getElementById("btn-view-raw-json").onclick = () => {
@@ -656,6 +663,32 @@ function exportComparisonToCSV() {
   link.click();
   document.body.removeChild(link);
   showToast("Comparison CSV downloaded", "success");
+}
+
+function exportComparisonToJSON() {
+  const matrix = state.summaryMetrics?.comparison_matrix || {};
+  const portfolio = state.summaryMetrics?.portfolio || {};
+  if (Object.keys(matrix).length === 0) {
+    showToast("No policies to export", "info");
+    return;
+  }
+
+  const exportData = {
+    export_timestamp: new Date().toISOString(),
+    portfolio_summary: portfolio,
+    comparison_matrix: matrix
+  };
+
+  const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "policy_comparison_matrix.json";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+  showToast("Comparison JSON downloaded", "success");
 }
 
 // =====================================================================

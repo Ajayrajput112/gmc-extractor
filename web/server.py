@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 
 from fastapi import FastAPI, File, UploadFile, HTTPException, Query, BackgroundTasks
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
+from fastapi.responses import HTMLResponse, JSONResponse, FileResponse, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.extractor import extract_pdf_content
@@ -314,6 +314,58 @@ def download_summary_csv():
         csv_path,
         media_type="text/csv",
         filename="gmc_policies_summary.csv"
+    )
+
+
+@app.get("/api/download/json")
+def download_portfolio_json():
+    """Serves compiled portfolio JSON containing all extracted policy data."""
+    os.makedirs(OUTPUTS_DIR, exist_ok=True)
+    policies = []
+    for fname in sorted(os.listdir(OUTPUTS_DIR)):
+        if fname.endswith(".json"):
+            fpath = os.path.join(OUTPUTS_DIR, fname)
+            try:
+                with open(fpath, "r", encoding="utf-8") as f:
+                    policies.append(json.load(f))
+            except Exception:
+                continue
+
+    summary_data = get_summary_metrics()
+    export_payload = {
+        "export_title": "GMC Insurance Policy Portfolio Extraction",
+        "export_date": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "portfolio_summary": summary_data.get("portfolio", {}),
+        "total_policies": len(policies),
+        "policies": policies
+    }
+
+    content_str = json.dumps(export_payload, indent=2, ensure_ascii=False)
+    return Response(
+        content=content_str,
+        media_type="application/json",
+        headers={"Content-Disposition": 'attachment; filename="gmc_portfolio_export.json"'}
+    )
+
+
+@app.get("/api/policy/{policy_id}/download")
+def download_single_policy_json(policy_id: str):
+    """Downloads full JSON extraction for a specific policy as an attachment."""
+    os.makedirs(OUTPUTS_DIR, exist_ok=True)
+    target_file = None
+    for fname in os.listdir(OUTPUTS_DIR):
+        if fname.endswith(".json") and (fname == policy_id or clean_output_stem(fname) == policy_id or fname.startswith(policy_id)):
+            target_file = os.path.join(OUTPUTS_DIR, fname)
+            break
+
+    if not target_file or not os.path.exists(target_file):
+        raise HTTPException(status_code=404, detail=f"Policy '{policy_id}' not found.")
+
+    filename = os.path.basename(target_file)
+    return FileResponse(
+        target_file,
+        media_type="application/json",
+        filename=filename
     )
 
 

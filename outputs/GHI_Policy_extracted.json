@@ -1,0 +1,343 @@
+{
+  "is_gmc_policy": true,
+  "policy_type": "Group Medical Cover",
+  "flag_notes": null,
+  "insurer_name": "Care Health Insurance Limited",
+  "tpa_name": "In-House / Direct Insurer Claims Team",
+  "policy_details": {
+    "policy_name": "Group Care 360",
+    "policy_number": "39899400",
+    "policy_holder_name": "MUKUNDA FOODS PVT LTD",
+    "start_date": "17-Mar-2022",
+    "end_date": "16-Mar-2023",
+    "policy_tenure_days": 365,
+    "is_renewal": null,
+    "previous_policy_number": null,
+    "family_structure": "Self + Spouse + 4 Dependent children",
+    "sum_insured_tiers": [
+      200000.0
+    ]
+  },
+  "premium": {
+    "net_premium": 461699.0,
+    "gst_amount": 83105.72,
+    "total_premium": 544804.0,
+    "payment_frequency": "ANNUAL"
+  },
+  "demographics": {
+    "total_employees": 86,
+    "total_spouses": null,
+    "total_children": null,
+    "total_parents": null,
+    "total_dependents": 66,
+    "total_lives": 152
+  },
+  "features": {
+    "room_rent": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "No Limit",
+      "source_page": 2,
+      "evidence": "Sum Insured Maximum eligibility for Normal Hospitalization Maximum eligibility for ICU Hospitalization\nRs. 200,000 No Limit No Limit",
+      "confidence": 1.0
+    },
+    "icu_charges": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "No Limit",
+      "source_page": 2,
+      "evidence": "Sum Insured Maximum eligibility for Normal Hospitalization Maximum eligibility for ICU Hospitalization\nRs. 200,000 No Limit No Limit",
+      "confidence": 1.0
+    },
+    "pre_hospitalization": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": 30,
+      "conditions": null,
+      "source_page": 2,
+      "evidence": "Pre & Post Hospitalization is covered for 30 days and 60 days respectively.",
+      "confidence": 1.0
+    },
+    "post_hospitalization": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": 60,
+      "conditions": null,
+      "source_page": 2,
+      "evidence": "Pre & Post Hospitalization is covered for 30 days and 60 days respectively.",
+      "confidence": 1.0
+    },
+    "maternity_normal": {
+      "status": "covered",
+      "limit_amount": 75000.0,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "Maternity Expenses Benefit is available for Employees or Spouse Only if covered in data. Maternity claim is payable for first two dependent children only. Pre & Post natal expenses are not covered.",
+      "source_page": 2,
+      "evidence": "Maximum Limit for Maternity claims is Rs. 75,000 for Normal and Rs. 75,000 for LSCS .",
+      "confidence": 1.0
+    },
+    "maternity_c_section": {
+      "status": "covered",
+      "limit_amount": 75000.0,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "Maternity Expenses Benefit is available for Employees or Spouse Only if covered in data. Maternity claim is payable for first two dependent children only. Pre & Post natal expenses are not covered.",
+      "source_page": 2,
+      "evidence": "Maximum Limit for Maternity claims is Rs. 75,000 for Normal and Rs. 75,000 for LSCS .",
+      "confidence": 1.0
+    },
+    "maternity_waiting_period_9m": {
+      "status": "waived",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": 2,
+      "evidence": "9 month waiting period in respect of maternity claims waived for all Insured Members.",
+      "confidence": 1.0
+    },
+    "baby_day_one_cover": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": 1,
+      "conditions": "New Born Baby covered from day one within family floater Sum Insured applicable to the Employee.",
+      "source_page": 2,
+      "evidence": "New Born Baby covered from day one within family floater Sum Insured applicable to the Employee.",
+      "confidence": 1.0
+    },
+    "vaccination_coverage": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "waiting_period_30_days": {
+      "status": "waived",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": 30,
+      "conditions": "waived off for existing members and new joinees.",
+      "source_page": 2,
+      "evidence": "30 Days Wait Period condition is waived off for existing members and new joinees.",
+      "confidence": 1.0
+    },
+    "waiting_period_first_second_year": {
+      "status": "waived",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "First & Second year exclusion condition for specific diseases is waived off for all Insured Members.",
+      "source_page": 2,
+      "evidence": "First & Second year exclusion condition for specific diseases is waived off for all Insured Members.",
+      "confidence": 1.0
+    },
+    "pre_existing_diseases": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "Pre-existing diseases are covered for existing members and new joinees.",
+      "source_page": 2,
+      "evidence": "Pre-existing diseases are covered for existing members and new joinees.",
+      "confidence": 1.0
+    },
+    "day_care_expenses": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "List of Day Care procedure attached as “Annexure A under Know your policy Better”",
+      "source_page": 2,
+      "evidence": "Day Care Treatment : List of Day Care procedure attached as “Annexure A under Know your policy Better”",
+      "confidence": 1.0
+    },
+    "opd_benefit": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "teleconsultation": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "pharmacy_discount": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "domiciliary_hospitalization": {
+      "status": "not_covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "Domiciliary Hospitalization is specifically excluded.",
+      "source_page": 3,
+      "evidence": "Domiciliary Hospitalization is specifically excluded.",
+      "confidence": 1.0
+    },
+    "annual_health_checkup": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "modern_treatment": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": 50.0,
+      "days": null,
+      "conditions": "Modern treatments, psychiatric treatments and Bariatric Surgery covered under the policy as per terms and conditions upto 50% of the Sum Insured.",
+      "source_page": 2,
+      "evidence": "Modern treatments, psychiatric treatments and Bariatric Surgery covered under the policy as per terms and conditions upto\n50% of the Sum Insured.",
+      "confidence": 1.0
+    },
+    "bariatric_treatment": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": 50.0,
+      "days": null,
+      "conditions": "Modern treatments, psychiatric treatments and Bariatric Surgery covered under the policy as per terms and conditions upto 50% of the Sum Insured.",
+      "source_page": 2,
+      "evidence": "Modern treatments, psychiatric treatments and Bariatric Surgery covered under the policy as per terms and conditions upto\n50% of the Sum Insured.",
+      "confidence": 1.0
+    },
+    "psychiatric_treatment": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": 50.0,
+      "days": null,
+      "conditions": "Modern treatments, psychiatric treatments and Bariatric Surgery covered under the policy as per terms and conditions upto 50% of the Sum Insured.",
+      "source_page": 2,
+      "evidence": "Modern treatments, psychiatric treatments and Bariatric Surgery covered under the policy as per terms and conditions upto\n50% of the Sum Insured.",
+      "confidence": 1.0
+    },
+    "ayush_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "lgbtq_live_in_partners": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "organ_donor_expenses": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "infertility_treatment": {
+      "status": "not_covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "Infertility & related ailments including male sterility , treatment on trial /experimental basis are outside the scope of this policy.",
+      "source_page": 4,
+      "evidence": "Infertility & related ailments including male sterility , treatment on trial /experimental basis; expenses on fitting of prosthesis (any device /instrument/contributing machine/replacing the functions of an organ) holter monitoring are outside the scope of this policy.",
+      "confidence": 1.0
+    },
+    "surrogacy_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "ambulance_charges": {
+      "status": "covered",
+      "limit_amount": 1000.0,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "per claim",
+      "source_page": 2,
+      "evidence": "Ambulance charges payable up to a maximum amount of Rs. 1,000/- per claim.",
+      "confidence": 1.0
+    },
+    "air_ambulance_charges": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "corporate_buffer": {
+      "status": "covered",
+      "limit_amount": 500000.0,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "Applicable for specific Critical Illnesses only after exhausting the family floater Sum Insured. Aggregate Liability in respect of all such claims under Corporate Floater shall not exceed Rs. 5 LAKH for all the Insured members.",
+      "source_page": 3,
+      "evidence": "Our Aggregate Liability in respect of all such claims under Corporate Floater shall not exceed Rs. 5 LAKH for all the Insured members as applicable during the period of insurance.",
+      "confidence": 1.0
+    },
+    "disease_wise_capping": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    }
+  },
+  "source_file": "GHI Policy.pdf",
+  "total_pages": 4,
+  "validation_status": "PASSED",
+  "validation_messages": [
+    "All policy validation checks passed successfully."
+  ]
+}

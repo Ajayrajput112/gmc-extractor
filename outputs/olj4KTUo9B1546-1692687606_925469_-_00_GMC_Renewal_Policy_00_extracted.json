@@ -1,0 +1,350 @@
+{
+  "is_gmc_policy": true,
+  "policy_type": "Group Medical Cover",
+  "flag_notes": null,
+  "insurer_name": "Niva Bupa Health Insurance Company Limited",
+  "tpa_name": null,
+  "policy_details": {
+    "policy_name": "Policy Document – Health Plus",
+    "policy_number": "00600900202301",
+    "policy_holder_name": "Myndloop Tech Private Limited",
+    "start_date": "01-August-2023",
+    "end_date": "31-July-2024",
+    "policy_tenure_days": 366,
+    "is_renewal": true,
+    "previous_policy_number": null,
+    "family_structure": "Employee, Spouse and Kids",
+    "sum_insured_tiers": [
+      500000.0
+    ]
+  },
+  "premium": {
+    "net_premium": 83454.0,
+    "gst_amount": 15022.0,
+    "total_premium": 98476.0,
+    "payment_frequency": "Anually"
+  },
+  "demographics": {
+    "total_employees": 9,
+    "total_spouses": null,
+    "total_children": null,
+    "total_parents": null,
+    "total_dependents": 11,
+    "total_lives": 20
+  },
+  "features": {
+    "room_rent": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": 1.0,
+      "days": null,
+      "conditions": "If the Insured Person is admitted in the Hospital in a room category or in a room where the Room Rent is higher than the eligibility as specified above, then Niva Bupa shall be liable to pay only a pro-rated proportion of the total Associated Medical Expenses (including surcharge or taxes thereon) in the proportion of the difference between the Room Rent actually incurred and the entitled room category/eligible Room Rent.",
+      "source_page": 3,
+      "evidence": "Hospital Accommodation – Room rent/day & ICU/day | Normal | 1%",
+      "confidence": 0.95
+    },
+    "icu_charges": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": 2.0,
+      "days": null,
+      "conditions": null,
+      "source_page": 3,
+      "evidence": "Hospital Accommodation – Room rent/day & ICU/day | ICU | 2%",
+      "confidence": 0.95
+    },
+    "pre_hospitalization": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": 30,
+      "conditions": "Covered upto Sum Insured for 30 days",
+      "source_page": 3,
+      "evidence": "Pre Hospitalization Medical Expenses | Covered upto Sum Insured for 30 days",
+      "confidence": 0.95
+    },
+    "post_hospitalization": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": 60,
+      "conditions": "Covered upto Sum Insured for 60 days",
+      "source_page": 3,
+      "evidence": "Post Hospitalization Medical Expenses | Covered upto Sum Insured for 60 days",
+      "confidence": 0.95
+    },
+    "maternity_normal": {
+      "status": "covered",
+      "limit_amount": 25000.0,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder. The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations.",
+      "source_page": 3,
+      "evidence": "Maternity Expenses | Normal | 25,000",
+      "confidence": 0.95
+    },
+    "maternity_c_section": {
+      "status": "covered",
+      "limit_amount": 35000.0,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder. The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations.",
+      "source_page": 3,
+      "evidence": "Maternity Expenses | C-Section | 35,000",
+      "confidence": 0.95
+    },
+    "maternity_waiting_period_9m": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "baby_day_one_cover": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery.",
+      "source_page": 3,
+      "evidence": "1. New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery.",
+      "confidence": 0.95
+    },
+    "vaccination_coverage": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "waiting_period_30_days": {
+      "status": "waived",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": 3,
+      "evidence": "Initial Waiting Period | Waived Off",
+      "confidence": 0.95
+    },
+    "waiting_period_first_second_year": {
+      "status": "waived",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": 3,
+      "evidence": "2 yr exclusions (Disease Specific Exclusions) | Waived Off",
+      "confidence": 0.95
+    },
+    "pre_existing_diseases": {
+      "status": "waived",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": 3,
+      "evidence": "Pre-Existing Disease (PED) | Waived Off",
+      "confidence": 0.95
+    },
+    "day_care_expenses": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": 3,
+      "evidence": "Listed Day Care Treatment | Covered upto Sum Insured",
+      "confidence": 0.95
+    },
+    "opd_benefit": {
+      "status": "not_covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": 3,
+      "evidence": "OPD Coverage | Not Covered",
+      "confidence": 0.95
+    },
+    "teleconsultation": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "pharmacy_discount": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "domiciliary_hospitalization": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "annual_health_checkup": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "modern_treatment": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate.",
+      "source_page": 3,
+      "evidence": "3. 50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate.",
+      "confidence": 0.95
+    },
+    "bariatric_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "psychiatric_treatment": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": 3,
+      "evidence": "6. Psychiatric Ailments / Functional Endoscopic Sinus Surgery / Mental illness covered",
+      "confidence": 0.95
+    },
+    "ayush_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "lgbtq_live_in_partners": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "organ_donor_expenses": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "infertility_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "surrogacy_treatment": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "ambulance_charges": {
+      "status": "covered",
+      "limit_amount": 1000.0,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "per hospitalization",
+      "source_page": 3,
+      "evidence": "Emergency Ambulance | INR 1000 per hospitalization",
+      "confidence": 0.95
+    },
+    "air_ambulance_charges": {
+      "status": "not_mentioned",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": null,
+      "evidence": null,
+      "confidence": null
+    },
+    "corporate_buffer": {
+      "status": "not_covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": null,
+      "source_page": 3,
+      "evidence": "Corporate Floater | Not Covered",
+      "confidence": 0.95
+    },
+    "disease_wise_capping": {
+      "status": "covered",
+      "limit_amount": null,
+      "limit_percent_si": null,
+      "days": null,
+      "conditions": "Haemorrhoidectomy including Cost of stapler- 40000, Haemorrhoidectomy and Fissurectomy in a single sitting-35000, Cholecystectomy- 35000, Hernioplasty/Herniorraphy- Unilateral including cost of mesh and tacker- 45000, Hernioplasty/Herniorraphy- Bilateral including Cost of mesh and tacker-50000, URS (therapeutic) Including cost of laser treatment-35000, PCNL- Unilateral-50000, PCNL- Bilateral-60000, Hydrocele-25000,Appendicectomy-45000, Cataract per eye including Cost of Lens-25000, Hysterectomy (Abdominal/Vaginal)-55000, Total Knee Replacement(Unilateral) including cost of implants-100000, Total Knee Replacement (Bilateral) including cost of implants-150000, Hip Replacement (Unilateral) including cost of implants-100000, Hip Replacement (Bilateral) including cost of implants-150000",
+      "source_page": 3,
+      "evidence": "Haemorrhoidectomy including Cost of stapler- 40000, Haemorrhoidectomy and Fissurectomy in a single sitting-35000, Cholecystectomy- 35000, Hernioplasty/Herniorraphy- Unilateral including cost of mesh and tacker- 45000, Hernioplasty/Herniorraphy- Bilateral including Cost of mesh and tacker-50000, URS (therapeutic) Including cost of laser treatment-35000, PCNL- Unilateral-50000, PCNL- Bilateral-60000, Hydrocele-25000,Appendicectomy-45000, Cataract per eye including Cost of Lens-25000, Hysterectomy (Abdominal/Vaginal)-55000, Total Knee Replacement(Unilateral) including cost of implants-100000, Total Knee Replacement (Bilateral) including cost of implants-150000, Hip Replacement (Unilateral) including cost of implants-100000, Hip Replacement (Bilateral) including cost of implants-150000",
+      "confidence": 0.95
+    }
+  },
+  "source_file": "olj4KTUo9B1546-1692687606_925469 - 00 GMC Renewal Policy 00.pdf",
+  "total_pages": 6,
+  "validation_status": "FAILED",
+  "validation_messages": [
+    "Feature 'pre_hospitalization' evidence quote was NOT found in document: \"Pre Hospitalization Medical Expenses | Covered upto Sum Insured for 30 days...\"",
+    "Feature 'post_hospitalization' evidence quote was NOT found in document: \"Post Hospitalization Medical Expenses | Covered upto Sum Insured for 60 days...\"",
+    "Feature 'maternity_c_section' evidence quote was NOT found in document: \"Maternity Expenses | C-Section | 35,000...\"",
+    "Feature 'waiting_period_30_days' evidence quote was NOT found in document: \"Initial Waiting Period | Waived Off...\"",
+    "Feature 'pre_existing_diseases' evidence quote was NOT found in document: \"Pre-Existing Disease (PED) | Waived Off...\"",
+    "Feature 'day_care_expenses' evidence quote was NOT found in document: \"Listed Day Care Treatment | Covered upto Sum Insured...\"",
+    "Feature 'opd_benefit' evidence quote was NOT found in document: \"OPD Coverage | Not Covered...\"",
+    "Feature 'ambulance_charges' evidence quote was NOT found in document: \"Emergency Ambulance | INR 1000 per hospitalization...\""
+  ]
+}
