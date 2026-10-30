@@ -1,0 +1,14 @@
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.DS_Store
+*.egg-info/
+
+run.log
+cache/
+test_models.py
+
+samples/*.pdf
+samples/*.docx

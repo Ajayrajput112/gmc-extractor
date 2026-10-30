@@ -1,0 +1,190 @@
+{
+  "insurers": [
+    {
+      "name": "Care Health Insurance Limited",
+      "aliases": ["Care Health Insurance", "Religare Health Insurance", "Care Health", "Religare"],
+      "regex": "\\b(Care\\s+Health\\s+Insurance|Religare\\s+Health\\s+Insurance|Care\\s+Health)\\b"
+    },
+    {
+      "name": "Niva Bupa Health Insurance Company Limited",
+      "aliases": ["Niva Bupa Health Insurance", "Max Bupa Health Insurance", "Niva Bupa", "Max Bupa"],
+      "regex": "\\b(Niva\\s+Bupa|Max\\s+Bupa)\\b"
+    },
+    {
+      "name": "Liberty General Insurance Limited",
+      "aliases": ["Liberty General Insurance", "Liberty Videocon General Insurance", "Liberty Insurance"],
+      "regex": "\\b(Liberty\\s+General\\s+Insurance|Liberty\\s+Insurance|Liberty\\s+Videocon)\\b"
+    },
+    {
+      "name": "Tata AIG General Insurance Company Limited",
+      "aliases": ["Tata AIG General Insurance", "Tata AIG"],
+      "regex": "\\b(Tata\\s+AIG)\\b"
+    },
+    {
+      "name": "Star Health and Allied Insurance Company Limited",
+      "aliases": ["Star Health and Allied Insurance", "Star Health"],
+      "regex": "\\b(Star\\s+Health(\\s+and\\s+Allied\\s+Insurance)?)\\b"
+    },
+    {
+      "name": "ICICI Lombard General Insurance Company Limited",
+      "aliases": ["ICICI Lombard General Insurance", "ICICI Lombard"],
+      "regex": "\\b(ICICI\\s+Lombard)\\b"
+    },
+    {
+      "name": "HDFC ERGO General Insurance Company Limited",
+      "aliases": ["HDFC ERGO General Insurance", "HDFC ERGO"],
+      "regex": "\\b(HDFC\\s+ERGO)\\b"
+    },
+    {
+      "name": "Bajaj Allianz General Insurance Company Limited",
+      "aliases": ["Bajaj Allianz General Insurance", "Bajaj Allianz"],
+      "regex": "\\b(Bajaj\\s+Allianz)\\b"
+    },
+    {
+      "name": "Aditya Birla Health Insurance Company Limited",
+      "aliases": ["Aditya Birla Health Insurance", "Aditya Birla"],
+      "regex": "\\b(Aditya\\s+Birla(\\s+Health)?)\\b"
+    },
+    {
+      "name": "ManipalCigna Health Insurance Company Limited",
+      "aliases": ["ManipalCigna Health Insurance", "ManipalCigna", "Cigna TTK"],
+      "regex": "\\b(Manipal\\s*Cigna|Cigna\\s*TTK)\\b"
+    },
+    {
+      "name": "The New India Assurance Company Limited",
+      "aliases": ["The New India Assurance", "New India Assurance"],
+      "regex": "\\b(New\\s+India\\s+Assurance)\\b"
+    },
+    {
+      "name": "United India Insurance Company Limited",
+      "aliases": ["United India Insurance"],
+      "regex": "\\b(United\\s+India\\s+Insurance)\\b"
+    },
+    {
+      "name": "National Insurance Company Limited",
+      "aliases": ["National Insurance"],
+      "regex": "\\b(National\\s+Insurance\\s+Company)\\b"
+    },
+    {
+      "name": "The Oriental Insurance Company Limited",
+      "aliases": ["The Oriental Insurance", "Oriental Insurance"],
+      "regex": "\\b(Oriental\\s+Insurance)\\b"
+    },
+    {
+      "name": "Go Digit General Insurance Limited",
+      "aliases": ["Go Digit General Insurance", "Digit Insurance", "Go Digit"],
+      "regex": "\\b(Go\\s*Digit|Digit\\s+General\\s+Insurance)\\b"
+    },
+    {
+      "name": "Acko General Insurance Limited",
+      "aliases": ["Acko General Insurance", "Acko Insurance", "Acko"],
+      "regex": "\\b(Acko\\s+General\\s+Insurance|Acko)\\b"
+    },
+    {
+      "name": "SBI General Insurance Company Limited",
+      "aliases": ["SBI General Insurance", "SBI General"],
+      "regex": "\\b(SBI\\s+General\\s+Insurance)\\b"
+    },
+    {
+      "name": "Reliance General Insurance Company Limited",
+      "aliases": ["Reliance General Insurance"],
+      "regex": "\\b(Reliance\\s+General\\s+Insurance)\\b"
+    },
+    {
+      "name": "Future Generali India Insurance Company Limited",
+      "aliases": ["Future Generali"],
+      "regex": "\\b(Future\\s+Generali)\\b"
+    },
+    {
+      "name": "Cholamandalam MS General Insurance Company Limited",
+      "aliases": ["Cholamandalam MS", "Chola MS"],
+      "regex": "\\b(Cholamandalam\\s+MS|Chola\\s+MS)\\b"
+    }
+  ],
+  "tpas": [
+    {
+      "name": "Medi Assist Insurance TPA Private Limited",
+      "aliases": ["Medi Assist Insurance TPA", "Medi Assist TPA", "Medi Assist"],
+      "regex": "\\b(Medi\\s*Assist(\\s+Insurance)?(\\s+TPA)?)\\b"
+    },
+    {
+      "name": "Vidal Health Insurance TPA Private Limited",
+      "aliases": ["Vidal Health Insurance TPA", "Vidal Health TPA", "Vidal Health"],
+      "regex": "\\b(Vidal\\s*Health(\\s+Insurance)?(\\s+TPA)?)\\b"
+    },
+    {
+      "name": "Paramount Health Services & Insurance TPA Private Limited",
+      "aliases": ["Paramount Health Services", "Paramount TPA", "Paramount"],
+      "regex": "\\b(Paramount\\s+Health(\\s+Services)?(\\s+TPA)?)\\b"
+    },
+    {
+      "name": "Raksha Health Insurance TPA Private Limited",
+      "aliases": ["Raksha Health Insurance TPA", "Raksha TPA", "Raksha"],
+      "regex": "\\b(Raksha(\\s+Health)?(\\s+Insurance)?(\\s+TPA)?)\\b"
+    },
+    {
+      "name": "Heritage Health Insurance TPA Private Limited",
+      "aliases": ["Heritage Health Insurance TPA", "Heritage Health TPA", "Heritage Health"],
+      "regex": "\\b(Heritage\\s+Health(\\s+Insurance)?(\\s+TPA)?)\\b"
+    },
+    {
+      "name": "MDIndia Health Insurance TPA Private Limited",
+      "aliases": ["MDIndia Health Insurance TPA", "MDIndia TPA", "MDIndia", "MD India"],
+      "regex": "\\b(MD\\s*India(\\s+Health)?(\\s+Insurance)?(\\s+TPA)?)\\b"
+    },
+    {
+      "name": "Family Health Plan Insurance TPA Limited",
+      "aliases": ["FHPL", "Family Health Plan TPA", "Family Health Plan"],
+      "regex": "\\b(FHPL|Family\\s+Health\\s+Plan(\\s+Insurance)?(\\s+TPA)?)\\b"
+    },
+    {
+      "name": "Health Insurance TPA of India Limited",
+      "aliases": ["HITPA", "Health Insurance TPA of India"],
+      "regex": "\\b(HITPA|Health\\s+Insurance\\s+TPA\\s+of\\s+India)\\b"
+    },
+    {
+      "name": "Vipul MedCorp Insurance TPA Private Limited",
+      "aliases": ["Vipul MedCorp", "Vipul TPA"],
+      "regex": "\\b(Vipul\\s+MedCorp(\\s+Insurance)?(\\s+TPA)?)\\b"
+    },
+    {
+      "name": "Ericson Insurance TPA Private Limited",
+      "aliases": ["Ericson Insurance TPA", "Ericson TPA", "Ericson"],
+      "regex": "\\b(Ericson(\\s+Insurance)?(\\s+TPA)?)\\b"
+    },
+    {
+      "name": "Safeway Insurance TPA Private Limited",
+      "aliases": ["Safeway Insurance TPA", "Safeway TPA", "Safeway"],
+      "regex": "\\b(Safeway(\\s+Insurance)?(\\s+TPA)?)\\b"
+    },
+    {
+      "name": "In-House / Direct Insurer Claims Team",
+      "aliases": ["In-House", "Direct Claims", "Claims Servicing Team", "In-House Claims Team"],
+      "regex": "\\b(In[- ]House(\\s+Claims)?|Claims\\s+Servicing\\s+Team|Direct\\s+Insurer\\s+Claims)\\b"
+    }
+  ],
+  "policy_types": {
+    "gpa_indicators": [
+      "\\bGroup\\s+Personal\\s+Accident\\b",
+      "\\bPersonal\\s+Accident\\s+Policy\\b",
+      "\\bAccidental\\s+Death\\b",
+      "\\bPermanent\\s+Total\\s+Disability\\b",
+      "\\bLIBERTY\\s+GROUP\\s+PERSONAL\\s+ACCIDENT\\b"
+    ],
+    "gtl_indicators": [
+      "\\bGroup\\s+Term\\s+Life\\b",
+      "\\bGroup\\s+Term\\s+Insurance\\b",
+      "\\bLife\\s+Cover\\b"
+    ],
+    "gmc_indicators": [
+      "\\bGroup\\s+Medical\\s+Cover\\b",
+      "\\bGroup\\s+Health\\s+Insurance\\b",
+      "\\bGroup\\s+Mediclaim\\b",
+      "\\bGroup\\s+Care\\s*360\\b",
+      "\\bHealth\\s+Plus\\b",
+      "\\bIn[- ]patient\\s+Care\\b",
+      "\\bRoom\\s+Rent\\b",
+      "\\bPre[- ]hospitalization\\b"
+    ]
+  }
+}
